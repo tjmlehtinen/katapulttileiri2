@@ -2,6 +2,10 @@ using UnityEngine;
 
 public class CatapultScript : MonoBehaviour
 {
+    public Transform launchPosition;
+    public Rigidbody ammoBody;
+    public Vector3 launchDirection = new Vector3(0, 1, 1);
+    public float launchForce = 10f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -11,8 +15,21 @@ public class CatapultScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Launch();
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            ResetCatapult();
+        }
     }
     void Launch()
-    {}
+    {
+        ammoBody.AddForce(launchDirection.normalized * launchForce, ForceMode.Impulse);
+    }
+    void ResetCatapult()
+    {
+        ammoBody.transform.position = launchPosition.position;
+    }
 }
