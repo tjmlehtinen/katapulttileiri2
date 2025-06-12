@@ -26,10 +26,12 @@ public class CatapultScript : MonoBehaviour
     }
     void Launch()
     {
+        ammoBody.isKinematic = false;
         ammoBody.AddForce(launchDirection.normalized * launchForce, ForceMode.Impulse);
     }
     void ResetCatapult()
     {
+        ammoBody.isKinematic = true;
         ammoBody.transform.position = launchPosition.position;
     }
 }
