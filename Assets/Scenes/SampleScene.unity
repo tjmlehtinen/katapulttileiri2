@@ -209,6 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd1b8ca0429ca004e9566cdb1ed07909, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  turret: {fileID: 1812681742}
   launchPosition: {fileID: 129624000}
   ammoBody: {fileID: 1331260759}
   launchDirection: {x: 0, y: 1, z: 1}
@@ -1347,6 +1348,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5268279929733697203, guid: c853e287773c8104e84dc3e08d8555b5, type: 3}
   m_PrefabInstance: {fileID: 1249385299}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1812681742 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4312451312238780, guid: 16356cdf71fc4b0499d0b7fd3d6c0cd9, type: 3}
+  m_PrefabInstance: {fileID: 129623999}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1992291375
 PrefabInstance:
